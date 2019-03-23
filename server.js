@@ -3,13 +3,20 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 
+// create the app instance
+var app = express();
+
+// set the port (process.env.PORT is required for heroku support)
+var PORT = process.env.PORT || 8080;
+
+// Sets up the Express app to handle data parsing
+// ***** these must be added before creating the routes ***** //
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // create routers
 var htmlRouter = require('./app/routes/htmlRoutes');
 var apiRouter = require('./app/routes/apiRoutes');
-
-
-// create the app instance
-var app = express();
 
 app.use('/', htmlRouter);
 app.use('/api', apiRouter);
@@ -29,13 +36,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json(err);
 });
-
-// set the port (process.env.PORT is required for heroku support)
-var PORT = process.env.PORT || 8080;
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 // start the server
 app.listen(PORT, function() {

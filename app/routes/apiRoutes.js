@@ -8,7 +8,8 @@ router.get(`/friends`, function(req, res, next) {
 });
 
 router.post(`/friends`, function(req, res) {
-  console.log(req.body);
+  console.log(`/api/friends POST endpoint`);
+  console.log(req.body.question1);
   // find the most compatible person
 
   // send back the name and picture
@@ -16,7 +17,7 @@ router.post(`/friends`, function(req, res) {
   // save the new person to the data
 
   // send the client back to the homepage
-  res.redirect(`/`);
+  res.json({friend: "Fred Rogers"});
 });
 
 module.exports = router;
