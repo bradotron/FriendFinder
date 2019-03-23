@@ -23,35 +23,129 @@
       <div class="jumbotron my-2">
         <h1 class="display-4">FriendFinder Compatibility Survey</h1>
         <hr class="my-4" />
-        <p>Answer the questions on a scale of 1 to 10</p>
+        <p>
+          Answer the questions on a scale of 1 (Strongly Disagree) to 10
+          (Strongly Agree)
+        </p>
       </div>
       <form id="survey-form" action="/api/friends" method="POST">
-        <div class="container">
-                  <div class="card">
-          <p>Question 1:</p>
-          <hr class="my-1">
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="question1"
-              id="q1c1"
-              value="1"
-            />
-            <label class="form-check-label" for="q1c1">1</label>
-          </div>
+
+        <div class="container border mb-2">
+            <p>Question 1: Do you like dogs?</p>
+            <hr class="my-1" />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c1"
+                value="1"
+              />
+              <label class="form-check-label" for="q1c1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c2"
+                value="2"
+              />
+              <label class="form-check-label" for="q1c2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c3"
+                value="3"
+              />
+              <label class="form-check-label" for="q1c3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c4"
+                value="4"
+              />
+              <label class="form-check-label" for="q1c4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c5"
+                value="5"
+              />
+              <label class="form-check-label" for="q1c5">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c6"
+                value="6"
+              />
+              <label class="form-check-label" for="q1c6">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c7"
+                value="7"
+              />
+              <label class="form-check-label" for="q1c7">7</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c8"
+                value="8"
+              />
+              <label class="form-check-label" for="q1c8">8</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c9"
+                value="9"
+              />
+              <label class="form-check-label" for="q1c9">9</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="question1"
+                id="q1c10"
+                value="10"
+              />
+              <label class="form-check-label" for="q1c10">10</label>
+            </div>
         </div>
 
         <button id="submit-survey" class="btn btn-primary">Submit</button>
       </form>
     </div>
 
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -62,31 +156,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script>
-        // $(function () {
-        //   // insert form stuff here.
-        //   $("#survey-form").on("submit", function (event) {
-        //     // Make sure to preventDefault on a submit event.
-        //     event.preventDefault();
-        //     console.log(event);
-
-        //     var formData = {
-        //       question1: 1,
-        //       question2: 2
-        //     };
-
-        //     // Send the POST request.
-        //     $.ajax("/api/friends", {
-        //       type: "POST",
-        //       data: formData
-        //     }).then(
-        //       function () {
-        //         console.log("did a thing");
-        //         location.assign("/");
-        //       }
-        //     );
-        //   });
-        // });
-      </script>
   </body>
 </html>
